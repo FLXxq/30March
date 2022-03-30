@@ -1,4 +1,5 @@
-﻿using System;
+﻿using _30March.Pages;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,9 +21,15 @@ namespace _30March
     /// </summary>
     public partial class MainWindow : Window
     {
+
         public MainWindow()
         {
             InitializeComponent();
+            Loaded += OpenLoginPage;
+        }
+        private void OpenLoginPage(object sender, RoutedEventArgs e)
+        {
+            MainFrame.Navigate(new LoginPage());
         }
     }
 }
